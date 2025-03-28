@@ -1,0 +1,113 @@
+/* Primeiro, ocultar os elementos em telas maiores */
+button, .container, .status, header, h1 {
+    display: none;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 200000px) {
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fcfdfd;
+        font-family: Montserrat, sans-serif;
+    }
+
+    header {
+        display: flex; /* Agora será visível no mobile */
+        background-color: #072959;
+        padding: 10px 0;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        justify-content: space-between; 
+        align-items: center;
+        padding: 0 4px;
+    }
+
+    .header-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-logo img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 10px; 
+    }
+
+    .content {
+        margin-top: 100px; 
+        text-align: center;
+    }
+
+    .container {
+        display: block; /* Visível no mobile */
+        text-align: center;
+        background-color: #e4e1e1;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+        max-width: 100%; /* Ajuste para mobile */
+    }
+
+    h1 {
+        display: block; /* Visível no mobile */
+        font-family: Montserrat, sans-serif;
+        font-size: 16px;
+        color: #072959;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+        justify-content: space-between; 
+        margin-bottom: 5px;
+    }
+
+    /* Estilo dos botões */
+    button {
+        display: inline-block; /* Visível no mobile */
+        font-family: Montserrat, sans-serif;
+        color: white;
+        border: none;
+        padding: 10px 30px; 
+        font-size: 14px;
+        border-radius: 24px;
+        cursor: pointer;
+        margin: 5px 10px;
+        transition: background-color 0.3s, transform 0.3s;
+        min-width: 100px;
+    }
+
+    /* Efeito ao passar o mouse */
+    button:hover {
+        transform: scale(1.05);
+    }
+
+    /* Efeito de clique */
+    button:active {
+        transform: scale(0.95);
+    }
+
+    /* Classes de botões com diferentes cores */
+    .button1, .button2 {
+        background-color: #474849;
+    }
+
+    .button3 {
+        background-color: #072959;
+    }
+
+    .button4 {
+        color: #050505;
+        background-color: #ffc107;
+    }
+}
